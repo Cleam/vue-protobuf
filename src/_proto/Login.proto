@@ -1,0 +1,47 @@
+syntax = "proto2";
+
+import public "Message.proto";
+
+package pb;
+
+message LoginRequest {
+    optional string imei = 1;
+    optional string deviceid = 2;
+    required string accid = 3;
+    optional string muid = 4;
+    required string apptypeid = 5;
+    optional string appcqid = 6;
+    optional string appqid = 7;
+    optional string appver = 8;
+    optional string appverint = 9;
+    optional string os = 10;
+    optional string osversion = 11;
+    optional string device = 12;
+    optional string devicebrand = 13;
+    optional string province = 14;
+    optional string city = 15;
+    optional string country = 16;
+    optional string pixel = 17;
+    optional string network = 18;
+    optional string istourist = 19;
+    optional string obatchid = 20;
+    optional string isyueyu = 21;
+    optional string aaid = 22;
+    optional string oaid = 23;
+    optional string appvers = 24;
+    optional string appversint = 25;
+    optional string lng = 26;
+    optional string lat = 27;
+    optional string srcqid = 28;
+    optional string srcplat = 29;
+    optional string userinfo = 30;
+    required string lt = 31;
+}
+
+message LoginResponse {
+    required Code code = 1;
+
+}
+
+
+

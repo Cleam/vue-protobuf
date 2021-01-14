@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package com.xuyanze.thetago.common.codec.protobuf;
+option optimize_for = SPEED;
+option java_package = "com.xuyanze.thetago.common.codec.protobuf";
+
+
+message PlayStoneRequest {
+    required string stone = 1;
+}
+
+message PlayStoneResponse {
+    required Stone stone = 1;
+}
+
+message Stone {
+    required string accid = 1;
+    required int32 order = 2;
+    required string move = 3;
+}

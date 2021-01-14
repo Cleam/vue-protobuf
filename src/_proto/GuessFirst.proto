@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+import public "Message.proto";
+
+package com.xuyanze.thetago.common.codec.protobuf;
+option optimize_for = SPEED;
+option java_package = "com.xuyanze.thetago.common.codec.protobuf";
+
+
+message GuessFirstRequest {
+    required string move = 1;
+}
+
+message GuessFirstResponse {
+    optional int64 timestamp = 1;
+}

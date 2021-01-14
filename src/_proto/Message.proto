@@ -1,0 +1,42 @@
+syntax = "proto2";
+
+package pb;
+
+enum Command {
+    LOGIN_REQUEST = 0; //登陆请求
+    LOGIN_RESPONSE = 1; //登录响应
+
+    HEARTBEAT_REQUEST = 2; //心跳请求
+    HEARTBEAT_RESPONSE = 3; //心跳响应
+
+    GUESS_FIRST_REQUEST = 4; //猜先请求
+    GUESS_FIRST_RESPONSE = 5; //猜先响应
+
+    GAME_START_REQUEST = 6; //开始游戏
+    GAME_START_RESPONSE = 7; // 开始游戏响应
+
+
+    PLAY_STONE_REQUEST = 8; //落子请求
+    PLAY_STONE_RESPONSE = 9; //落子响应
+
+    AI_STEP_RESPONSE = 11; //AI 下一步响应
+
+    GAME_TIME_RESPONSE = 12; // 游戏时间结束
+    GAME_COUNTDOWN_RESPONSE = 13; // 单次读秒时间到了
+}
+
+message Code {
+    required int32 code = 1;
+    required string msg = 2;
+}
+
+message Player {
+    required string accid = 1;
+    required string nickName = 2;
+    required string headImg = 3;
+    optional string attrs = 4;
+}
+
+
+
+

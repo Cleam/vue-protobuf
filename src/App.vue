@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="_getStudentList">获取学生列表</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { getStudentList } from '@/api/student';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  methods: {
+    _getStudentList() {
+      const req = {
+        limit: 20,
+        offset: 0,
+      };
+      getStudentList(req)
+        .then(res => {
+          console.log(res);
+        })
+        .catch(res => {
+          console.error(res);
+        });
+    },
+  },
+  created() {},
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>

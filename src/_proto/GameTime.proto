@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package com.xuyanze.thetago.common.codec.protobuf;
+option optimize_for = SPEED;
+option java_package = "com.xuyanze.thetago.common.codec.protobuf";
+
+
+message GameTimeResponse {
+    optional int64 timestamp = 1;
+}
+
+
+

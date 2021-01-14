@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package com.xuyanze.thetago.common.codec.protobuf;
+option optimize_for = SPEED;
+option java_package = "com.xuyanze.thetago.common.codec.protobuf";
+
+
+message EndMoveRequest {
+    optional int64 timestamp = 1;
+
+}
+
+message EndMoveResponse {
+    optional int64 timestamp = 1;
+}
+
+
+
